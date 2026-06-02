@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html { scroll-behavior: smooth; }
+body { font-family: system-ui, -apple-system, sans-serif; background: #FDFAF4; color: #1C1410; line-height: 1.6; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.marquee-track { animation: marquee 32s linear infinite; }
