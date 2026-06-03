@@ -16,42 +16,37 @@ const GAP_RESULTS: Record<GapState, GapResult> = {
   unaware: {
     state: 'unaware',
     label: 'Stage 1 — Unaware',
-    message:
-      'You\'re still trading hours for dollars. AI is reshaping healthcare faster than most nurses realize — but the window to position early is now.',
+    message: 'You\'re still trading hours for dollars. AI is reshaping every profession faster than most people realize — but the window to position early is now.',
     cta: 'Download the AI Income Scorecard',
-    ctaHref: '/resources/scorecard',
+    ctaHref: 'https://limitless-intelligence-systems.vercel.app/resources/scorecard',
   },
   aware: {
     state: 'aware',
     label: 'Stage 2 — Aware',
-    message:
-      'You know AI is coming and you\'re paying attention. The gap between knowing and acting is where most nurses stall. Let\'s close it.',
+    message: 'You know AI is coming and you\'re paying attention. The gap between knowing and acting is where most professionals stall. Let\'s close it.',
     cta: 'Join the Free AI Income Workshop',
-    ctaHref: '/workshop',
+    ctaHref: 'https://limitless-intelligence-systems.vercel.app/workshop',
   },
   exploring: {
     state: 'exploring',
     label: 'Stage 3 — Exploring',
-    message:
-      'You\'re researching tools and possibilities. What you need now is a proven system — not more information. The LIMITLESS ecosystem was built for this exact stage.',
-    cta: 'Explore VDASR™ & NOCAiS Platforms',
-    ctaHref: '/platforms',
+    message: 'You\'re researching tools and possibilities. What you need now is a proven system — not more information. The LIMITLESS ecosystem was built for this exact stage.',
+    cta: 'Explore the Platforms',
+    ctaHref: 'https://limitless-healthcare-ai.vercel.app/platforms',
   },
   transitioning: {
     state: 'transitioning',
     label: 'Stage 4 — Transitioning',
-    message:
-      'You\'re actively building. You need acceleration, not more courses. Done-with-you implementation is your fastest path to scalable income.',
+    message: 'You\'re actively building. You need acceleration, not more courses. Done-with-you implementation is your fastest path to scalable income.',
     cta: 'Apply for the WEALTH™ Intensive',
-    ctaHref: '/intensive',
+    ctaHref: 'https://limitless-intelligence-systems.vercel.app/intensive',
   },
   scaling: {
     state: 'scaling',
     label: 'Stage 5 — Scaling',
-    message:
-      'You\'re already generating digital income from your clinical expertise. Now it\'s about systems, leverage, and leading others through the gap you already crossed.',
+    message: 'You\'re already generating digital income from your expertise. Now it\'s about systems, leverage, and leading others through the gap you already crossed.',
     cta: 'Join the Inner Circle',
-    ctaHref: '/inner-circle',
+    ctaHref: 'https://limitless-intelligence-systems.vercel.app/inner-circle',
   },
 };
 
@@ -80,13 +75,13 @@ const QUESTIONS = [
   },
   {
     id: 'q3',
-    text: 'What best describes your clinical expertise right now?',
+    text: 'How would you describe the expertise you bring to your work?',
     options: [
-      { value: 0, label: 'I\'m early in my nursing career' },
-      { value: 1, label: '1–5 years, building my skills' },
-      { value: 2, label: '5–10 years, specialised knowledge' },
-      { value: 3, label: '10–20 years, leadership experience' },
-      { value: 4, label: '20+ years, industry-level authority' },
+      { value: 0, label: 'I\'m still building my foundational knowledge' },
+      { value: 1, label: 'I have a few years of solid experience' },
+      { value: 2, label: 'I\'m considered knowledgeable in my field' },
+      { value: 3, label: 'I have deep expertise others come to me for' },
+      { value: 4, label: 'I\'m a recognised authority in my industry' },
     ],
   },
 ];
@@ -112,8 +107,7 @@ export default function AIReadinessGap() {
 
   function handleSubmit() {
     const total = Object.values(answers).reduce((a, b) => a + b, 0);
-    const state = scoreToState(total);
-    setResult(GAP_RESULTS[state]);
+    setResult(GAP_RESULTS[scoreToState(total)]);
     setSubmitted(true);
   }
 
@@ -124,50 +118,39 @@ export default function AIReadinessGap() {
   }
 
   return (
-    <section className="w-full py-24 px-6 bg-[#FAF8F3]">
+    <section className="w-full py-20 px-6 bg-[#C89B3C]">
       <div className="max-w-3xl mx-auto">
-        {/* Section header */}
-        <p className="font-mono text-xs tracking-[0.18em] uppercase text-[#c9a84c] mb-3">
+        <p className="font-mono text-xs tracking-[0.18em] uppercase text-[#1a1200] opacity-70 mb-3">
           Diagnostic Assessment
         </p>
-        <h2 className="font-serif text-4xl font-normal tracking-tight text-[#1a1200] mb-4 leading-snug">
+        <h2 className="font-serif text-5xl font-bold tracking-tight text-[#1a1200] mb-5 leading-tight">
           Where Are You<br />in the Gap?
         </h2>
-        <p className="text-[#4a3f28] text-lg leading-relaxed mb-4 max-w-xl">
-          Between the bedside and scalable income lies a gap. Most nurses don't know
-          where they stand — or which bridge crosses it fastest.
+        <p className="text-[#1a1200] text-xl leading-relaxed mb-8 max-w-xl font-medium opacity-80">
+          Between where you are today and scalable income lies a gap. Most professionals
+          do not know where they stand — or which bridge crosses it fastest.
         </p>
-
-        {/* Gap bridge visual */}
         <div className="relative h-20 mb-12 flex items-center">
           <div className="absolute inset-0 flex items-end">
-            <div className="h-14 w-[22%] bg-[#e8dfc8] rounded-t-lg flex items-center justify-center">
-              <span className="font-mono text-[10px] text-[#8a7550] uppercase tracking-widest text-center leading-tight px-2">
-                Clinical<br/>Burnout
-              </span>
-            </div>
-            <div className="flex-1 h-px border-t-2 border-dashed border-[#c9a84c55] self-center mx-2" />
             <div className="h-14 w-[22%] bg-[#1a1200] rounded-t-lg flex items-center justify-center">
-              <span className="font-mono text-[10px] text-[#c9a84c] uppercase tracking-widest text-center leading-tight px-2">
-                Scalable<br/>Income™
-              </span>
+              <span className="font-mono text-[10px] text-[#C89B3C] uppercase tracking-widest text-center leading-tight px-2">Trading<br/>Time</span>
+            </div>
+            <div className="flex-1 h-px border-t-2 border-dashed border-[#1a120066] self-center mx-2" />
+            <div className="h-14 w-[22%] bg-[#1a1200] rounded-t-lg flex items-center justify-center">
+              <span className="font-mono text-[10px] text-[#C89B3C] uppercase tracking-widest text-center leading-tight px-2">Scalable<br/>Income™</span>
             </div>
           </div>
           <div className="absolute left-[22%] right-[22%] mx-2 h-8 self-center flex items-center justify-center">
-            <span className="bg-[#c9a84c] text-[#1a1200] font-mono text-[10px] tracking-[0.15em] uppercase px-4 py-1 rounded-sm">
-              LIMITLESS ecosystem
-            </span>
+            <span className="bg-[#FAF8F3] text-[#1a1200] font-mono text-[10px] font-bold tracking-[0.15em] uppercase px-4 py-1 rounded-sm">LIMITLESS ecosystem</span>
           </div>
         </div>
-
-        {/* Quiz */}
         {!submitted ? (
           <div>
             <div className="space-y-8 mb-10">
               {QUESTIONS.map((q, qi) => (
                 <div key={q.id}>
-                  <p className="text-[#1a1200] font-medium mb-3 text-[15px]">
-                    <span className="font-mono text-[#c9a84c] text-xs mr-2">0{qi + 1}</span>
+                  <p className="text-[#1a1200] font-bold mb-4 text-lg">
+                    <span className="font-mono text-[#1a1200] opacity-60 text-sm mr-2">0{qi + 1}</span>
                     {q.text}
                   </p>
                   <div className="space-y-2">
@@ -177,10 +160,10 @@ export default function AIReadinessGap() {
                         <button
                           key={opt.value}
                           onClick={() => handleSelect(q.id, opt.value)}
-                          className={`w-full text-left px-4 py-3 rounded text-sm border transition-all duration-150 ${
+                          className={`w-full text-left px-5 py-4 rounded text-base font-medium border-2 transition-all duration-150 ${
                             selected
-                              ? 'bg-[#1a1200] border-[#c9a84c] text-[#c9a84c]'
-                              : 'bg-white border-[#e0d6be] text-[#4a3f28] hover:border-[#c9a84c]'
+                              ? 'bg-[#1a1200] border-[#1a1200] text-[#C89B3C]'
+                              : 'bg-[#FAF8F3] border-[#FAF8F3] text-[#1a1200] hover:border-[#1a1200]'
                           }`}
                         >
                           {opt.label}
@@ -191,37 +174,24 @@ export default function AIReadinessGap() {
                 </div>
               ))}
             </div>
-
             <button
               onClick={handleSubmit}
               disabled={!allAnswered}
-              className="bg-[#1a1200] text-[#c9a84c] font-mono text-sm tracking-[0.12em] uppercase px-8 py-3 rounded transition-opacity disabled:opacity-30 hover:opacity-90"
+              className="bg-[#1a1200] text-[#C89B3C] font-mono text-sm font-bold tracking-[0.12em] uppercase px-10 py-4 rounded transition-opacity disabled:opacity-30 hover:opacity-90"
             >
               Reveal My Gap Score →
             </button>
           </div>
         ) : (
           result && (
-            <div className="bg-[#1a1200] rounded-lg p-8 border border-[#c9a84c33]">
-              <p className="font-mono text-[#c9a84c] text-xs tracking-[0.18em] uppercase mb-2">
-                Your Result
-              </p>
-              <h3 className="text-[#FAF8F3] text-2xl font-serif font-normal mb-4">
-                {result.label}
-              </h3>
-              <p className="text-[#c9b87a] text-[15px] leading-relaxed mb-8">
-                {result.message}
-              </p>
-              <a
-                href={result.ctaHref}
-                className="inline-block bg-[#c9a84c] text-[#1a1200] font-mono text-xs tracking-[0.15em] uppercase px-8 py-3 rounded-sm hover:bg-[#b89440] transition-colors"
-              >
+            <div className="bg-[#1a1200] rounded-lg p-10 border-2 border-[#C89B3C33]">
+              <p className="font-mono text-[#C89B3C] text-xs tracking-[0.18em] uppercase mb-3">Your Result</p>
+              <h3 className="text-[#FAF8F3] text-3xl font-serif font-bold mb-5">{result.label}</h3>
+              <p className="text-[#c9b87a] text-lg leading-relaxed mb-10">{result.message}</p>
+              <a href={result.ctaHref} className="inline-block bg-[#C89B3C] text-[#1a1200] font-mono text-sm font-bold tracking-[0.15em] uppercase px-10 py-4 rounded hover:bg-[#E8C26A] transition-colors">
                 {result.cta} →
               </a>
-              <button
-                onClick={handleReset}
-                className="ml-4 text-[#c9a84c55] font-mono text-xs tracking-widest uppercase hover:text-[#c9a84c] transition-colors"
-              >
+              <button onClick={handleReset} className="ml-5 text-[#FAF8F366] font-mono text-xs tracking-widest uppercase hover:text-[#FAF8F3] transition-colors">
                 Retake
               </button>
             </div>
