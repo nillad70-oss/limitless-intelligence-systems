@@ -1,6 +1,8 @@
 'use client'
 import Image from 'next/image'
 import { useEffect, useRef } from 'react'
+import AIReadinessGap from '@/components/sections/AIReadinessGap'
+import ConversionLadder from '@/components/sections/ConversionLadder'
 
 const platforms = [
   { name: 'Limitless Healthcare AI™', desc: 'AI innovation & workforce solutions for healthcare organizations', color: '#0F6E56', bg: 'rgba(15,110,86,.08)', border: 'rgba(15,110,86,.2)', url: 'https://limitlesshealthcareai.com', icon: '🏥' },
@@ -154,20 +156,6 @@ export default function Page() {
           <div style={{ position:'absolute', inset:0, background:'linear-gradient(to top,#EDE0C4 0%,transparent 25%)' }} />
 
           {/* Floating cards — glass on light */}
-          <div className="fc glass-light gold-shadow" style={{ position:'absolute', bottom:'120px', left:'20px', borderRadius:'16px', padding:'16px 20px', minWidth:'160px' }}>
-            <div style={{ display:'flex', alignItems:'center', gap:'8px', marginBottom:'8px' }}>
-              <span className="pdg" />
-              <span style={{ fontSize:'11px', color:'#6B8A7A', fontWeight:600, textTransform:'uppercase', letterSpacing:'.08em' }}>Live System</span>
-            </div>
-            <div className="hl" style={{ fontSize:'20px', fontWeight:700, color:'#C89B3C', lineHeight:1 }}>VDASR.ai™</div>
-            <div style={{ fontSize:'11px', color:'#8A7A6A', marginTop:'4px' }}>AI home health platform</div>
-          </div>
-
-          <div className="fc2 glass-light gold-shadow" style={{ position:'absolute', top:'120px', right:'20px', borderRadius:'16px', padding:'16px 20px', minWidth:'148px' }}>
-            <div style={{ fontSize:'10px', color:'#8A7A6A', textTransform:'uppercase', letterSpacing:'.1em', marginBottom:'6px' }}>Time Saved Weekly</div>
-            <div className="hl" style={{ fontSize:'32px', fontWeight:700, color:'#C89B3C', lineHeight:1 }}>12+ hrs</div>
-            <div style={{ fontSize:'11px', color:'#8A7A6A', marginTop:'4px' }}>with AI documentation</div>
-          </div>
 
           <div style={{ position:'absolute', bottom:'40px', left:'50%', transform:'translateX(-50%)', background:'rgba(253,250,244,.92)', backdropFilter:'blur(12px)', border:'1px solid rgba(200,155,60,.25)', borderRadius:'12px', padding:'10px 22px', textAlign:'center', whiteSpace:'nowrap', boxShadow:'0 4px 20px rgba(200,155,60,.12)' }}>
             <div className="hl" style={{ fontSize:'16px', fontWeight:700, color:'#1C1410' }}>Leonilla Addeh</div>
@@ -246,6 +234,12 @@ export default function Page() {
           ))}
         </div>
       </section>
+
+      {/* AI READINESS GAP */}
+      <AIReadinessGap />
+
+      {/* CONVERSION LADDER */}
+      <ConversionLadder />
 
       {/* ABOUT — ONE dark section for drama */}
       <section id="about" style={{ padding:'96px 5%', background:'linear-gradient(135deg,#1C1410 0%,#2C1F0A 100%)', position:'relative', overflow:'hidden' }}>
