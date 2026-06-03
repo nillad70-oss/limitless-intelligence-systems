@@ -5,10 +5,10 @@ import AIReadinessGap from '@/components/sections/AIReadinessGap'
 import ConversionLadder from '@/components/sections/ConversionLadder'
 
 const platforms = [
-  { name: 'Limitless Healthcare AI™', desc: 'AI innovation & workforce solutions for healthcare organizations', color: '#0F6E56', bg: 'rgba(15,110,86,.08)', border: 'rgba(15,110,86,.2)', url: 'https://limitlesshealthcareai.com', icon: '🏥' },
+  { name: 'Limitless Healthcare AI™', desc: 'AI innovation & workforce solutions for healthcare organizations', color: '#0F6E56', bg: 'rgba(15,110,86,.08)', border: 'rgba(15,110,86,.2)', url: 'https://limitless-healthcare-ai.vercel.app', icon: '🏥' },
   { name: 'VDASR.ai™', desc: 'AI-powered home health documentation & clinical intelligence', color: '#185FA5', bg: 'rgba(24,95,165,.08)', border: 'rgba(24,95,165,.2)', url: 'https://vdasr-ai.web.app', icon: '📋' },
-  { name: 'NillaFlow Studio™', desc: 'AI-powered digital income & creator economy platform', color: '#C89B3C', bg: 'rgba(200,155,60,.08)', border: 'rgba(200,155,60,.25)', url: 'https://nillaflowstudio.app', icon: '✨' },
-  { name: 'NOCAiS™', desc: 'Nursing operations command AI system for LTC leadership', color: '#BA7517', bg: 'rgba(186,117,23,.08)', border: 'rgba(186,117,23,.2)', url: '#', icon: '⚡' },
+  { name: 'NillaFlow Studio™', desc: 'AI-powered digital income & creator economy platform', color: '#C89B3C', bg: 'rgba(200,155,60,.08)', border: 'rgba(200,155,60,.25)', url: 'https://nillaflow-studio-marketing.vercel.app', icon: '✨' },
+  { name: 'NOCAiS™', desc: 'Nursing operations command AI system for LTC leadership', color: '#BA7517', bg: 'rgba(186,117,23,.08)', border: 'rgba(186,117,23,.2)', url: 'https://nocais-platform.vercel.app', icon: '⚡' },
 ]
 
 const transformations = [
